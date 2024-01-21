@@ -23,7 +23,6 @@ public class WeatherController {
 	
 	@GetMapping("/summary/{locationName}")
 	@ResponseBody
-	@Autowired(required = true)
 	public Object getForcastSummary(@PathVariable("locationName") String locationName)
 	{ 
 		logger.info("Summary controller started");
@@ -32,7 +31,7 @@ public class WeatherController {
 	
 	@GetMapping("/hourly/{locationName}")
 	@ResponseBody
-	@Autowired(required = true)
+	//@Autowired(required = true)
 	public  ResponseEntity<String> getHourlyWeather(@PathVariable("locationName") String locationName)
 	{
 		logger.info("Hourly controller started");
